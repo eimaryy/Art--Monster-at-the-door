@@ -1,0 +1,523 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --brown: rgb(73, 73, 73);
+    font-family: 'Roboto', sans-serif;
+}
+
+root {
+    font-size: 62.5%;
+
+}
+
+body {
+    min-height: 100dvh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(77, 77, 77); */
+
+}
+
+.structure {
+    max-width: 80dvw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#phrase {
+    font-size: 1rem;
+    color: black;
+    margin: 2rem;
+    margin-bottom: -7rem;
+}
+
+span {
+    color: rgb(89, 68, 116);
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h2 a {
+    text-decoration: none;
+    color: rgb(89, 68, 116);
+}
+
+.content {
+    position: relative;
+}
+
+.door,
+.open-door {
+    width: 13rem;
+    height: 22rem;
+}
+
+.door {
+    position: absolute;
+    bottom: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    border: 0.2rem solid black;
+    border-radius: 2%;
+
+    animation: 8s 0.59s moveToTheDoor infinite;
+
+    /* Safari 4+ */
+    -webkit-animation: 8s 0.59s moveToTheDoor infinite;
+    /* Fx 5+ */
+    -moz-animation: 8s 0.59s moveToTheDoor infinite;
+    /* Opera 12+ */
+    -o-animation: 8s 0.59s moveToTheDoor infinite;
+
+
+}
+
+.eyes {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+
+}
+
+.eye-right,
+.eye-left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(221, 221, 221);
+    height: 2.5rem;
+    width: 1.5rem;
+    margin-top: 6rem;
+    border-radius: 48%;
+
+    animation: eyesClosed 2s steps(1, end) infinite;
+
+}
+
+.pupil-eye-right,
+.pupil-eye-left {
+    position: relative;
+    background-color: black;
+    border-radius: 100%;
+    height: 1rem;
+    width: 0.5rem;
+}
+
+.open-door {
+    background-color: rgba(0, 0, 0, 0.747);
+    position: relative;
+    border-radius: 2%;
+
+}
+
+.dorknop {
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 100%;
+    background-color: var(--brown);
+    margin: 0.5rem;
+    border: 0.1rem solid black;
+    z-index: 1;
+
+}
+
+.keyhole {
+    background-color: rgb(0, 0, 0);
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 9rem;
+    right: 0.82rem;
+}
+
+.keyhole2 {
+
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 1rem solid rgb(0, 0, 0);
+    position: absolute;
+    bottom: 8.5rem;
+    right: 0.7rem;
+}
+
+.icon-sun1,
+.icon-sun2,
+.icon-sun3,
+.icon-sun4,
+.icon-sun5{
+    color: rgb(230, 189, 7);
+    position: absolute;
+    z-index: 1;
+
+}
+
+.icon-sun1 {
+    font-size: 2rem;
+    left: 3rem;
+    bottom: 3rem;
+}
+
+.icon-sun5 {
+    font-size: 1.5rem;
+    left: 0.2rem;
+    top: 9rem;
+
+}
+
+.icon-sun4 {
+    font-size: 1.5rem;
+    left: 5rem;
+    bottom: 0.1rem;
+}
+
+.icon-sun2 {
+    font-size: 1.2rem;
+    right: 1rem;
+    top: 7rem;
+}
+
+.icon-sun3 {
+    font-size: 1.2rem;
+    right: 0.5rem;
+    bottom: 1rem;
+}
+
+.line1,
+.line2,
+.line3,
+.line4 {
+    position: absolute;
+    width: 0.1rem;
+    background-color: var(--brown);
+    z-index: 2;
+    border-radius: 50% 0 0 0;
+}
+
+.line1 {
+    height: 5rem;
+    right: 3rem;
+    bottom: 0;
+}
+
+.line2 {
+    height: 7rem;
+    right: 9rem;
+    bottom: 0;
+}
+
+.line3 {
+    height: 4rem;
+    right: 6.5rem;
+    top: 0;
+}
+
+.line4 {
+    height: 3rem;
+    left: 0.9rem;
+    bottom: 7rem;
+    transform: rotate(40deg);
+}
+
+.window1,
+.window2,
+.window3,
+.window4 {
+    position: absolute;
+    width: 3.5rem;
+    border: thick double var(--brown);
+    background-color: #d3c0cf;
+
+}
+
+.window1 {
+    top: 2rem;
+    right: 2.5rem;
+    height: 9rem;
+    border-radius: 47% 47% 0 0;
+}
+
+.window2 {
+    top: 2rem;
+    left: 2.5rem;
+    height: 9rem;
+    border-radius: 47% 47% 0 0;
+}
+
+.window3 {
+    bottom: 2rem;
+    left: 2.5rem;
+    height: 8rem;
+
+}
+
+.window4 {
+    bottom: 2rem;
+    right: 2.5rem;
+    height: 8rem;
+}
+
+.key-box {
+    position: relative;
+
+}
+
+.key {
+    position: absolute;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    animation: 8s .68s key infinite;
+    /* Safari 4+ */
+    -moz-animation: 8s .68s key infinite;
+    /* Fx 5+ */
+    -o-animation: 8s .68s key infinite;
+    /* Opera 12+ */
+    -webkit-animation: 8s .68s key infinite;
+    transform: rotate(1.3deg);
+    -webkit-transform: rotate(1.3deg);
+    -moz-transform: rotate(1.3deg);
+}
+
+@keyframes key {
+    0% {
+        transform: rotate(2deg);
+        left: 2rem;
+        top: 1rem;
+
+    }
+
+    3% {
+        transform: rotate(15.5deg);
+        left: 2rem;
+        top: 1rem;
+
+
+    }
+
+    10% {
+        transform: rotate(1.3deg);
+        left: 2rem;
+
+    }
+
+    15% {
+        transform: rotate(1.3deg);
+        left: 2rem;
+
+    }
+
+    20% {
+        transform: rotate(2.3deg);
+        left: 2rem;
+
+    }
+
+    25% {
+        transform: rotate(2.5deg);
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    30% {
+        transform: rotate(2.3deg);
+        position: absolute;
+        top: 1rem;
+        left: -3.5rem;
+
+    }
+
+    35% {
+        transform: rotate(60deg);
+        position: absolute;
+        left: -3.5rem;
+        top: 1rem;
+        font-size: 1.2rem;
+
+    }
+
+    40% {
+        transform: rotate(2.3deg);
+        position: absolute;
+        left: -3.5rem;
+        top: 1rem;
+
+    }
+
+    45% {
+        transform: rotate(1.3deg);
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    50% {
+        transform: rotate(2.3deg);
+        top: 1rem;
+        left: 2rem;
+    }
+
+    55% {
+        transform: rotate(1.3deg);
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    60% {
+        transform: rotate(2.3deg);
+        top: 1rem;
+        left: 2rem;
+    }
+
+    65% {
+        transform: rotate(1.3deg);
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    70% {
+        transform: rotate(2.3deg);
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    75% {
+        transform: rotate(1.3deg);
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    80% {
+        transform: rotate(2.3deg);
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    85% {
+        transform: rotate(1.3deg);
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+
+    }
+
+    100% {
+        transform: rotate(1.3deg);
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+
+    }
+}
+
+@keyframes moveToTheDoor {
+    0% {
+        transform: none;
+    }
+
+    10% {
+        transform: none;
+
+    }
+
+    20% {
+        transform: none;
+
+    }
+
+    30% {
+        transform: none;
+
+    }
+
+    35% {
+        transform: none;
+
+    }
+
+    40% {
+        transform: none;
+
+    }
+
+    45% {
+        transform: none;
+    }
+
+    50% {
+        transform-origin: -0.1rem;
+        transform: rotateY(-120deg);
+        transition: .5s ease;
+
+    }
+
+    60% {
+        transform-origin: -0.1rem;
+        transform: rotateY(-120deg);
+
+    }
+
+    70% {
+        transform-origin: -0.1rem;
+        transform: rotateY(-120deg);
+
+    }
+
+    80% {
+        transform-origin: -0.1rem;
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform-origin: -0.1rem;
+        transform: rotateY(0deg);
+
+    }
+}
+
+@keyframes eyesClosed {
+    0% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
